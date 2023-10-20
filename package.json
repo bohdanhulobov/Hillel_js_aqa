@@ -1,0 +1,14 @@
+{
+  "name": "hillel_js_aqa",
+  "version": "1.0.0",
+  "description": "js + cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bohdan Hulobov",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.3.2"
+  }
+}
