@@ -85,7 +85,7 @@ function clearStr(str) {
   // initializing variable with the RegEx for special characters
   const specialCharsRegex = /[^a-zA-Z0-9\s]/g;
 
-  return str.replaceAll(specialCharsRegex, "");
+  return str.replaceAll(specialCharsRegex, "").trim().replaceAll("  ", " ");
 }
 
 console.log(clearStr("My var: 22 ")); // виведе "My var 22"
