@@ -43,10 +43,12 @@ function formatText(text) {
 
   // capitalizing first letter of each sentence
   for (let sentence of formattedText) {
-    sentence = sentence.charAt(0).toUpperCase() + sentence.slice(1);
+    let capitalizingSentence =
+      sentence.charAt(0).toUpperCase() + sentence.slice(1);
+    return capitalizingSentence;
   }
   // joining sentences into string
-  formattedText = formattedText.join(". ");
+  formattedText = capitalizingSentence.join(". ");
 
   return formattedText;
 }
