@@ -35,24 +35,24 @@ console.log(arr); // [1, 2, 3]
     - кожне речення починає з великої букви, а всі наступні символи в речені робить маленькими
 */
 function formatText(text) {
+  let formattedText = [];
+
   // cleaning up extra spaces and formatting entire text to the lowercase
-  let formattedText = text.trim().replaceAll("  ", "").toLowerCase();
+  formattedText = text.trim().replaceAll("  ", "").toLowerCase();
 
   // splitting text into sentences
   formattedText = formattedText.split(". ");
 
   // capitalizing first letter of each sentence
-  for (let sentence of formattedText) {
-    let capitalizingSentence =
-      sentence.charAt(0).toUpperCase() + sentence.slice(1);
-    return capitalizingSentence;
-  }
+  formattedText = formattedText.map((sentence) => {
+    return sentence.charAt(0).toUpperCase() + sentence.slice(1);
+  });
+
   // joining sentences into string
-  formattedText = capitalizingSentence.join(". ");
+  formattedText = formattedText.join(". ");
 
   return formattedText;
 }
-
 console.log(formatText("heLLo, this is My teXT.   have A NiCe DaY  ")); // "Hello, this is my text. Have a nice day"
 console.log(formatText(" Hello woRld   ")); // "Hello world"
 
@@ -93,3 +93,6 @@ function clearStr(str) {
 console.log(clearStr("My var: 22 ")); // виведе "My var 22"
 console.log(clearStr("Foo %$#% bar")); // виведе "Foo bar"
 console.log(clearStr("; SELECT * FROM passwords ")); // виведе "SELECT FROM passwords"
+
+let set = new Set("1");
+console.log(set);
