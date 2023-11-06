@@ -1,8 +1,10 @@
 import { Employee } from "./employee.js";
 
 export class Dev extends Employee {
+  #jobType = "I am a Dev";
+
   getJobType() {
-    return "I am a Dev";
+    return this.#jobType;
   }
 
   static returnArrayOfDevs(...devs) {
