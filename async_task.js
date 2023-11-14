@@ -28,8 +28,8 @@ const body = {
   body: "New body",
 };
 async function createNewPost(url, body) {
-  await request.postRequest(url, body);
-  return body;
+  let response = await request.postRequest(url, body);
+  return response;
 }
 
 const result = await createNewPost(baseUrl, body);
@@ -51,13 +51,13 @@ function resolveNumber() {
     }, 3000);
   });
 
-  promise
-    .then((result) => {
-      console.log(result);
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+  return promise;
 }
 
-resolveNumber(); //далі обробка промісу, в консолі або, наприклад, Resolved 7, або Rejected 2 (в залежності від рандомно створенного числа)
+resolveNumber()
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((error) => {
+    console.log(error);
+  }); //далі обробка промісу, в консолі або, наприклад, Resolved 7, або Rejected 2 (в залежності від рандомно створенного числа)
