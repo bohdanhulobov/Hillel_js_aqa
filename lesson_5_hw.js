@@ -10,7 +10,7 @@ function map(fn, array) {
   let result = [];
 
   //iterating through the array and applying the function
-  for (number of array) {
+  for (let number of array) {
     result.push(fn(number));
   }
   return result;
@@ -93,6 +93,3 @@ function clearStr(str) {
 console.log(clearStr("My var: 22 ")); // виведе "My var 22"
 console.log(clearStr("Foo %$#% bar")); // виведе "Foo bar"
 console.log(clearStr("; SELECT * FROM passwords ")); // виведе "SELECT FROM passwords"
-
-let set = new Set("1");
-console.log(set);
